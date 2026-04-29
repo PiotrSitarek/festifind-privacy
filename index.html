@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polityka Prywatności — FestiFind</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --surface: #1a1a1a;
+      --border: #2a2a2a;
+      --accent: #ff5c3a;
+      --text: #e8e4df;
+      --muted: #888;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .badge {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.2rem 0.6rem;
+      border-radius: 2rem;
+    }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 2rem;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0.35rem 0.9rem;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .lang-btn:hover:not(.active) {
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .hero {
+      margin-bottom: 4rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 em { font-style: italic; color: var(--accent); }
+
+    .meta { font-size: 0.85rem; color: var(--muted); letter-spacing: 0.04em; }
+
+    .summary-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 1.75rem;
+      border-radius: 4px;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .summary-box strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    section { margin-bottom: 3rem; }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      padding-top: 0.5rem;
+      color: var(--text);
+    }
+
+    h2 .num { color: var(--accent); font-style: italic; margin-right: 0.3rem; }
+
+    p { margin-bottom: 1rem; color: #c8c4bf; }
+    ul { margin: 0.5rem 0 1rem 0; padding-left: 1.4rem; }
+    li { color: #c8c4bf; margin-bottom: 0.4rem; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    a:hover { border-bottom-color: var(--accent); }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--text); }
+
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+
+    @media (max-width: 600px) {
+      main { padding: 2.5rem 1.25rem 4rem; }
+      header { padding: 1.75rem 1.25rem; }
+      .badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <a class="logo" href="#">Festi<span>Find</span></a>
+    <span class="badge" id="header-badge">Polityka Prywatności</span>
+  </div>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('pl')">PL</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- POLISH -->
+  <div data-lang="pl" class="visible">
+    <div class="hero">
+      <h1>Twoja prywatność<br>jest dla nas <em>priorytetem.</em></h1>
+      <p class="meta">Ostatnia aktualizacja: 29 kwietnia 2026</p>
+    </div>
+    <div class="summary-box">
+      <strong>W skrócie</strong>
+      FestiFind nie zbiera żadnych danych osobowych. Wszystkie Twoje dane (ulubione, plany, przypomnienia) przechowywane są wyłącznie lokalnie na Twoim urządzeniu i nigdy nie opuszczają telefonu.
+    </div>
+    <section>
+      <h2><span class="num">1.</span> Kim jesteśmy</h2>
+      <p>FestiFind to aplikacja mobilna do odkrywania festiwali i koncertów w Polsce, stworzona przez <strong>Piotra Sitarka</strong>. Aplikacja dostępna jest na platformach iOS i Android.</p>
+      <p>W razie pytań: <a href="mailto:mobile.apps.developer.pl@gmail.com">mobile.apps.developer.pl@gmail.com</a></p>
+    </section>
+    <section>
+      <h2><span class="num">2.</span> Jakie dane zbieramy</h2>
+      <p>FestiFind <strong>nie zbiera, nie przechowuje ani nie przesyła żadnych danych osobowych</strong>. Aplikacja działa w trybie offline-first — nie wymaga rejestracji ani logowania.</p>
+      <p>Dane przechowywane lokalnie na urządzeniu (nigdy nie wysyłane na serwer):</p>
+      <ul>
+        <li>Lista ulubionych wydarzeń</li>
+        <li>Lista wydarzeń oznaczonych „Idę tam!"</li>
+        <li>Zaplanowane przypomnienia o wydarzeniach</li>
+        <li>Obserwowane frazy wyszukiwania</li>
+        <li>Ustawienia aplikacji (motyw, język)</li>
+      </ul>
+    </section>
+    <section>
+      <h2><span class="num">3.</span> Dane wydarzeń</h2>
+      <p>Aplikacja pobiera listę wydarzeń muzycznych z publicznego serwera (GitHub Releases). Pobieranie odbywa się przy uruchomieniu aplikacji. Żądanie HTTP nie zawiera danych identyfikujących użytkownika.</p>
+    </section>
+    <section>
+      <h2><span class="num">4.</span> Powiadomienia lokalne</h2>
+      <p>FestiFind może wysyłać powiadomienia lokalne jako przypomnienia o nadchodzących wydarzeniach. Powiadomienia są generowane lokalnie — nie korzystamy z zewnętrznych serwerów push (FCM, APNs). Możesz wyłączyć powiadomienia w ustawieniach systemowych urządzenia.</p>
+    </section>
+    <section>
+      <h2><span class="num">5.</span> Usługi zewnętrzne</h2>
+      <p>Aplikacja nie korzysta z usług analitycznych, reklamowych ani śledzących (brak Firebase Analytics, Google Analytics, Facebook SDK itp.).</p>
+      <p>Dane o wydarzeniach pobierane są z publicznego serwera GitHub. Więcej informacji: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+    </section>
+    <section>
+      <h2><span class="num">6.</span> Dzieci</h2>
+      <p>FestiFind nie jest skierowany do dzieci poniżej 13. roku życia i świadomie nie zbiera danych od takich osób.</p>
+    </section>
+    <section>
+      <h2><span class="num">7.</span> Zmiany polityki</h2>
+      <p>Możemy aktualizować niniejszą politykę. O zmianach poinformujemy poprzez aktualizację daty na tej stronie.</p>
+    </section>
+    <hr class="divider">
+    <section>
+      <h2>Kontakt</h2>
+      <p><a href="mailto:mobile.apps.developer.pl@gmail.com">mobile.apps.developer.pl@gmail.com</a></p>
+    </section>
+  </div>
+
+  <!-- ENGLISH -->
+  <div data-lang="en">
+    <div class="hero">
+      <h1>Your privacy<br>is our <em>priority.</em></h1>
+      <p class="meta">Last updated: April 29, 2026</p>
+    </div>
+    <div class="summary-box">
+      <strong>In short</strong>
+      FestiFind does not collect any personal data. All your data (favourites, plans, reminders) is stored exclusively on your device and never leaves your phone.
+    </div>
+    <section>
+      <h2><span class="num">1.</span> Who we are</h2>
+      <p>FestiFind is a mobile app for discovering music festivals and concerts in Poland, created by <strong>Piotr Sitarek</strong>. Available on iOS and Android.</p>
+      <p>For privacy questions: <a href="mailto:mobile.apps.developer.pl@gmail.com">mobile.apps.developer.pl@gmail.com</a></p>
+    </section>
+    <section>
+      <h2><span class="num">2.</span> What data we collect</h2>
+      <p>FestiFind <strong>does not collect, store, or transmit any personal data</strong>. The app works in offline-first mode — no registration or login required.</p>
+      <p>Data stored locally on your device (never sent to any server):</p>
+      <ul>
+        <li>List of favourite events</li>
+        <li>List of events marked as "Going"</li>
+        <li>Scheduled event reminders</li>
+        <li>Watched search phrases</li>
+        <li>App settings (theme, language)</li>
+      </ul>
+    </section>
+    <section>
+      <h2><span class="num">3.</span> Event data</h2>
+      <p>The app fetches a list of music events from a public server (GitHub Releases) when launched. The HTTP request contains no user-identifying data.</p>
+    </section>
+    <section>
+      <h2><span class="num">4.</span> Local notifications</h2>
+      <p>FestiFind may send local notifications as reminders for upcoming events. Notifications are generated locally — we do not use external push notification servers (FCM, APNs). You can disable notifications in your device's system settings.</p>
+    </section>
+    <section>
+      <h2><span class="num">5.</span> Third-party services</h2>
+      <p>The app does not use any analytics, advertising, or tracking services (no Firebase Analytics, Google Analytics, Facebook SDK, etc.).</p>
+      <p>Event data is fetched from GitHub's public servers. More info: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+    </section>
+    <section>
+      <h2><span class="num">6.</span> Children</h2>
+      <p>FestiFind is not directed at children under 13 and does not knowingly collect data from such individuals.</p>
+    </section>
+    <section>
+      <h2><span class="num">7.</span> Changes to this policy</h2>
+      <p>We may update this privacy policy from time to time. Changes will be indicated by updating the date on this page.</p>
+    </section>
+    <hr class="divider">
+    <section>
+      <h2>Contact</h2>
+      <p><a href="mailto:mobile.apps.developer.pl@gmail.com">mobile.apps.developer.pl@gmail.com</a></p>
+    </section>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Piotr Sitarek · FestiFind · <a href="mailto:mobile.apps.developer.pl@gmail.com">Contact</a></p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('visible', el.dataset.lang === lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+    });
+    document.getElementById('header-badge').textContent =
+      lang === 'pl' ? 'Polityka Prywatności' : 'Privacy Policy';
+    document.documentElement.lang = lang;
+    document.title = lang === 'pl'
+      ? 'Polityka Prywatności — FestiFind'
+      : 'Privacy Policy — FestiFind';
+  }
+
+  // Auto-detect browser language
+  const browserLang = navigator.language?.startsWith('pl') ? 'pl' : 'en';
+  if (browserLang === 'en') setLang('en');
+</script>
+
+</body>
+</html>
