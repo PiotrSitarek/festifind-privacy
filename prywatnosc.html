@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FestiFind — Polityka prywatności</title>
+<meta name="description" content="Polityka prywatności FestiFind. Nie zbieramy danych osobowych — wszystko zostaje na Twoim telefonie.">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><img src="icon.png" alt="FestiFind">FestiFind</a>
+    <div class="nav-links">
+      <a href="index.html"><span class="lang-pl">Aplikacja</span><span class="lang-en">App</span></a>
+      <a class="active" href="prywatnosc.html"><span class="lang-pl">Prywatność</span><span class="lang-en">Privacy</span></a>
+      <span class="lang-toggle lang-na" role="group" aria-label="Język / Language">
+        <button id="btn-pl" class="on" onclick="setLang('pl')">PL</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </span>
+    </div>
+  </div>
+</nav>
+
+<main class="policy">
+  <div class="wrap">
+
+    <!-- ====== PL ====== -->
+    <div class="lang-pl">
+      <h1>Polityka prywatności</h1>
+      <p class="updated">Ostatnia aktualizacja: 29 kwietnia 2026</p>
+      <div class="tldr"><strong>W skrócie.</strong> FestiFind nie zbiera żadnych danych osobowych. Wszystkie Twoje dane (ulubione, plany, przypomnienia) przechowywane są wyłącznie lokalnie na Twoim urządzeniu i nigdy nie opuszczają telefonu.</div>
+
+      <h2>1. Kim jesteśmy</h2>
+      <p>FestiFind to aplikacja mobilna do odkrywania festiwali i koncertów w Polsce, stworzona przez Piotra Sitarka. Aplikacja dostępna jest na platformach iOS i Android.</p>
+      <p>W razie pytań: <a class="inline" href="mailto:mobile.apps.developer.pl@gmail.com">mobile.apps.developer.pl@gmail.com</a></p>
+
+      <h2>2. Jakie dane zbieramy</h2>
+      <p>FestiFind nie zbiera, nie przechowuje ani nie przesyła żadnych danych osobowych. Aplikacja działa w trybie offline-first — nie wymaga rejestracji ani logowania.</p>
+      <p>Dane przechowywane lokalnie na urządzeniu (nigdy nie wysyłane na serwer):</p>
+      <ul>
+        <li>Lista ulubionych wydarzeń</li>
+        <li>Lista wydarzeń oznaczonych „Idę tam!"</li>
+        <li>Zaplanowane przypomnienia o wydarzeniach</li>
+        <li>Obserwowane frazy wyszukiwania</li>
+        <li>Ustawienia aplikacji (motyw, język)</li>
+      </ul>
+
+      <h2>3. Dane wydarzeń</h2>
+      <p>Aplikacja pobiera listę wydarzeń muzycznych z publicznego serwera (GitHub Releases). Pobieranie odbywa się przy uruchomieniu aplikacji. Żądanie HTTP nie zawiera danych identyfikujących użytkownika.</p>
+
+      <h2>4. Powiadomienia lokalne</h2>
+      <p>FestiFind może wysyłać powiadomienia lokalne jako przypomnienia o nadchodzących wydarzeniach. Powiadomienia są generowane lokalnie — nie korzystamy z zewnętrznych serwerów push (FCM, APNs). Możesz wyłączyć powiadomienia w ustawieniach systemowych urządzenia.</p>
+
+      <h2>5. Usługi zewnętrzne</h2>
+      <p>Aplikacja nie korzysta z usług analitycznych, reklamowych ani śledzących (brak Firebase Analytics, Google Analytics, Facebook SDK itp.).</p>
+      <p>Dane o wydarzeniach pobierane są z publicznego serwera GitHub. Więcej informacji: <a class="inline" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+
+      <h2>6. Dzieci</h2>
+      <p>FestiFind nie jest skierowany do dzieci poniżej 13. roku życia i świadomie nie zbiera danych od takich osób.</p>
+
+      <h2>7. Zmiany polityki</h2>
+      <p>Możemy aktualizować niniejszą politykę. O zmianach poinformujemy poprzez aktualizację daty na tej stronie.</p>
+
+      <h2>Kontakt</h2>
+      <p><a class="inline" href="mailto:mobile.apps.developer.pl@gmail.com">mobile.apps.developer.pl@gmail.com</a></p>
+    </div>
+
+    <!-- ====== EN ====== -->
+    <div class="lang-en">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: 29 April 2026</p>
+      <div class="tldr"><strong>In short.</strong> FestiFind collects no personal data. All of your data (favourites, plans, reminders) is stored only locally on your device and never leaves your phone.</div>
+
+      <h2>1. Who we are</h2>
+      <p>FestiFind is a mobile app for discovering festivals and concerts in Poland, created by Piotr Sitarek. The app is available on iOS and Android.</p>
+      <p>Questions? <a class="inline" href="mailto:mobile.apps.developer.pl@gmail.com">mobile.apps.developer.pl@gmail.com</a></p>
+
+      <h2>2. What data we collect</h2>
+      <p>FestiFind does not collect, store or transmit any personal data. The app is offline-first — it requires no registration or sign-in.</p>
+      <p>Data stored locally on your device (never sent to a server):</p>
+      <ul>
+        <li>Your list of favourite events</li>
+        <li>Events marked as “I'm going!”</li>
+        <li>Scheduled event reminders</li>
+        <li>Watched search keywords</li>
+        <li>App settings (theme, language)</li>
+      </ul>
+
+      <h2>3. Event data</h2>
+      <p>The app downloads a list of music events from a public server (GitHub Releases). The download happens when the app starts. The HTTP request contains no user-identifying data.</p>
+
+      <h2>4. Local notifications</h2>
+      <p>FestiFind may send local notifications as reminders about upcoming events. Notifications are generated locally — we use no external push servers (FCM, APNs). You can turn notifications off in your device's system settings.</p>
+
+      <h2>5. Third-party services</h2>
+      <p>The app uses no analytics, advertising or tracking services (no Firebase Analytics, Google Analytics, Facebook SDK, etc.).</p>
+      <p>Event data is downloaded from a public GitHub server. More information: <a class="inline" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+
+      <h2>6. Children</h2>
+      <p>FestiFind is not directed at children under 13 and does not knowingly collect data from them.</p>
+
+      <h2>7. Changes to this policy</h2>
+      <p>We may update this policy. We will announce changes by updating the date on this page.</p>
+
+      <h2>Contact</h2>
+      <p><a class="inline" href="mailto:mobile.apps.developer.pl@gmail.com">mobile.apps.developer.pl@gmail.com</a></p>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:24px">The Polish version of this policy is the authoritative one.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="index.html"><img src="icon.png" alt="" style="width:26px;height:26px;border-radius:7px">FestiFind</a>
+    <div class="meta">
+      <span>© 2026 Piotr Sitarek</span>
+      <a href="mailto:mobile.apps.developer.pl@gmail.com">mobile.apps.developer.pl@gmail.com</a>
+      <a href="index.html"><span class="lang-pl">Aplikacja</span><span class="lang-en">App</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setLang(l){
+    document.documentElement.classList.toggle('en', l === 'en');
+    document.documentElement.lang = l;
+    document.getElementById('btn-pl').classList.toggle('on', l === 'pl');
+    document.getElementById('btn-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('ff_lang', l); } catch(e){}
+  }
+  (function(){ try { var s = localStorage.getItem('ff_lang'); if (s === 'en') setLang('en'); } catch(e){} })();
+</script>
+</body>
+</html>
