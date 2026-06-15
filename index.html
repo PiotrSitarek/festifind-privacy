@@ -3,17 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0D0D1A">
 <title>FestiFind — festiwale i koncerty w Polsce</title>
-<meta name="description" content="FestiFind — Twoje wydarzenia muzyczne w jednym miejscu. Bez konta, bez reklam, działa offline.">
+<meta name="description" content="FestiFind — Twoje wydarzenia muzyczne w jednym miejscu. Bez konta, bez reklam, działa offline. Aplikacja na iOS (Android wkrótce).">
+<link rel="canonical" href="https://piotrsitarek.github.io/festifind-privacy/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FestiFind">
 <meta property="og:title" content="FestiFind — festiwale i koncerty w Polsce">
 <meta property="og:description" content="Twoje wydarzenia muzyczne w jednym miejscu. Bez konta, bez reklam, offline.">
-<meta property="og:image" content="icon.png">
-<meta property="og:type" content="website">
-<link rel="icon" href="icon.png">
+<meta property="og:url" content="https://piotrsitarek.github.io/festifind-privacy/">
+<meta property="og:image" content="https://piotrsitarek.github.io/festifind-privacy/ogimage.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FestiFind — festiwale i koncerty w Polsce">
+<meta name="twitter:description" content="Twoje wydarzenia muzyczne w jednym miejscu. Bez konta, bez reklam, offline.">
+<meta name="twitter:image" content="https://piotrsitarek.github.io/festifind-privacy/ogimage.png">
+
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- JSON-LD: aplikacja -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FestiFind",
+  "operatingSystem": "iOS",
+  "applicationCategory": "LifestyleApplication",
+  "description": "Aplikacja mobilna do odkrywania festiwali i koncertów w Polsce. Offline-first, bez konta, bez reklam i bez śledzenia.",
+  "url": "https://piotrsitarek.github.io/festifind-privacy/",
+  "image": "https://piotrsitarek.github.io/festifind-privacy/ogimage.png",
+  "downloadUrl": "https://apps.apple.com/pl/app/festifind/id6772433956",
+  "inLanguage": ["pl", "en"],
+  "author": { "@type": "Person", "name": "Piotr Sitarek" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PLN" }
+}
+</script>
+
+<!-- JSON-LD: FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Czy FestiFind jest darmowy?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tak. FestiFind jest w pełni darmowy, bez reklam i bez płatności w aplikacji." }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy FestiFind wymaga konta lub logowania?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nie. Aplikacja działa bez rejestracji i logowania. Wszystkie dane są przechowywane lokalnie na Twoim telefonie." }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy FestiFind zbiera moje dane?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nie. FestiFind nie zbiera danych osobowych, nie korzysta z analityki ani śledzenia. Ulubione, plany i przypomnienia nie opuszczają urządzenia." }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy FestiFind działa offline?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tak. Po pobraniu danych przeglądasz wydarzenia bez internetu. Lista odświeża się przy starcie, gdy jest połączenie." }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy mogę trzymać bilety w aplikacji?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tak. Do wydarzeń z listy „Idę tam!” możesz dodać bilet w PDF lub jako zdjęcie i otworzyć go offline. Wszystkie Twoje bilety masz w jednym miejscu, obok planu." }
+    },
+    {
+      "@type": "Question",
+      "name": "Na jakich urządzeniach działa FestiFind?",
+      "acceptedAnswer": { "@type": "Answer", "text": "FestiFind jest dostępny na iOS w App Store. Wersja na Androida jest w przygotowaniu." }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -21,7 +98,7 @@
   <div class="nav-inner">
     <a class="brand" href="index.html"><img src="icon.png" alt="FestiFind"><span class="brand-name">FestiFind</span></a>
     <div class="nav-links">
-      <a class="active" href="index.html"><span class="lang-pl">Aplikacja</span><span class="lang-en">App</span></a>
+      <a class="active" href="index.html" aria-current="page"><span class="lang-pl">Aplikacja</span><span class="lang-en">App</span></a>
       <a href="prywatnosc.html"><span class="lang-pl">Prywatność</span><span class="lang-en">Privacy</span></a>
       <span class="lang-toggle lang-na" role="group" aria-label="Język / Language">
         <button id="btn-pl" class="on" onclick="setLang('pl')">PL</button>
@@ -34,6 +111,7 @@
 <header class="hero">
   <div class="wrap hero-inner">
     <div>
+      <img class="hero-icon" src="icon.png" alt="FestiFind">
       <h1>FestiFind</h1>
       <p class="lead">
         <span class="lang-pl">Twoje wydarzenia muzyczne — w jednym miejscu.</span>
@@ -97,7 +175,7 @@
         <h3><span class="lang-pl">Przeglądaj i filtruj</span><span class="lang-en">Browse and filter</span></h3>
         <p><span class="lang-pl">Festiwale, koncerty, wydarzenia od dziś, gatunki. Szukaj po nazwie, mieście, miesiącu czy roku — i znajdź dokładnie to, na co masz ochotę.</span><span class="lang-en">Festivals, concerts, events from today, genres. Search by name, city, month or year — and find exactly what you're in the mood for.</span></p>
       </div>
-      <div class="phone"><img src="screen2.png" alt="Lista i filtry wydarzeń"></div>
+      <div class="phone"><img src="screen2.png" alt="Lista i filtry wydarzeń" loading="lazy"></div>
     </div>
 
     <div class="feature">
@@ -105,7 +183,7 @@
         <h3><span class="lang-pl">Szczegóły i bilety</span><span class="lang-en">Details and tickets</span></h3>
         <p><span class="lang-pl">Data, miasto, miejsce i gatunek na jednym ekranie. Jeden tap dzieli Cię od strony z biletami.</span><span class="lang-en">Date, city, venue and genre on a single screen. You're one tap away from the ticket page.</span></p>
       </div>
-      <div class="phone"><img src="screen3.png" alt="Szczegóły wydarzenia"></div>
+      <div class="phone"><img src="screen3.png" alt="Szczegóły wydarzenia" loading="lazy"></div>
     </div>
 
     <div class="feature">
@@ -113,7 +191,15 @@
         <h3><span class="lang-pl">Plan „Idę tam!"</span><span class="lang-en">Your "I'm going!" plan</span></h3>
         <p><span class="lang-pl">Zaznacz wydarzenia, na które się wybierasz, i zobacz cały swój sezon na kalendarzu — w jednym rzucie oka.</span><span class="lang-en">Mark the events you're going to and see your whole season on a calendar — at a glance.</span></p>
       </div>
-      <div class="phone"><img src="screen5.png" alt="Kalendarz wydarzeń Idę tam"></div>
+      <div class="phone"><img src="screen5.png" alt="Kalendarz wydarzeń Idę tam" loading="lazy"></div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-text">
+        <h3><span class="lang-pl">Trzymaj bilety pod ręką</span><span class="lang-en">Keep your tickets handy</span></h3>
+        <p><span class="lang-pl">Dodaj bilet (PDF lub zdjęcie) do wydarzenia, na które idziesz. Koniec szukania po mailach, czatach i folderach — Twoje bilety masz obok planu, w jednym miejscu i także offline.</span><span class="lang-en">Attach a ticket (PDF or photo) to the event you're going to. No more digging through emails, chats and folders — your tickets sit next to your plan, in one place and even offline.</span></p>
+      </div>
+      <div class="phone"><img src="screen6.png" alt="Bilety przypięte do wydarzenia" loading="lazy"></div>
     </div>
 
     <div class="feature">
@@ -121,7 +207,40 @@
         <h3><span class="lang-pl">Przypomnienia i obserwowanie</span><span class="lang-en">Reminders and watching</span></h3>
         <p><span class="lang-pl">Ustaw przypomnienie na kilka godzin lub dzień wcześniej. Obserwuj artystów i frazy — damy znać, gdy pojawi się coś nowego.</span><span class="lang-en">Set a reminder hours or a day ahead. Watch artists and keywords — we'll let you know when something new shows up.</span></p>
       </div>
-      <div class="phone"><img src="screen4.png" alt="Powiadomienia i przypomnienia"></div>
+      <div class="phone"><img src="screen4.png" alt="Powiadomienia i przypomnienia" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="wrap">
+    <span class="eyebrow"><span class="lang-pl">Najczęstsze pytania</span><span class="lang-en">FAQ</span></span>
+    <h2><span class="lang-pl">Pytania i odpowiedzi</span><span class="lang-en">Questions and answers</span></h2>
+    <div class="faq-list">
+      <details>
+        <summary><span class="lang-pl">Czy FestiFind jest darmowy?</span><span class="lang-en">Is FestiFind free?</span></summary>
+        <p><span class="lang-pl">Tak. FestiFind jest w pełni darmowy, bez reklam i bez płatności w aplikacji.</span><span class="lang-en">Yes. FestiFind is completely free, with no ads and no in-app purchases.</span></p>
+      </details>
+      <details>
+        <summary><span class="lang-pl">Czy FestiFind wymaga konta lub logowania?</span><span class="lang-en">Does FestiFind require an account or sign-in?</span></summary>
+        <p><span class="lang-pl">Nie. Aplikacja działa bez rejestracji i logowania. Wszystkie dane są przechowywane lokalnie na Twoim telefonie.</span><span class="lang-en">No. The app works without registration or sign-in. All data is stored locally on your phone.</span></p>
+      </details>
+      <details>
+        <summary><span class="lang-pl">Czy FestiFind zbiera moje dane?</span><span class="lang-en">Does FestiFind collect my data?</span></summary>
+        <p><span class="lang-pl">Nie. FestiFind nie zbiera danych osobowych, nie korzysta z analityki ani śledzenia. Ulubione, plany i przypomnienia nie opuszczają urządzenia.</span><span class="lang-en">No. FestiFind collects no personal data and uses no analytics or tracking. Your favourites, plans and reminders never leave your device.</span></p>
+      </details>
+      <details>
+        <summary><span class="lang-pl">Czy FestiFind działa offline?</span><span class="lang-en">Does FestiFind work offline?</span></summary>
+        <p><span class="lang-pl">Tak. Po pobraniu danych przeglądasz wydarzenia bez internetu. Lista odświeża się przy starcie, gdy jest połączenie.</span><span class="lang-en">Yes. Once data is downloaded, you browse events without internet. The list refreshes on launch when you're online.</span></p>
+      </details>
+      <details>
+        <summary><span class="lang-pl">Czy mogę trzymać bilety w aplikacji?</span><span class="lang-en">Can I keep my tickets in the app?</span></summary>
+        <p><span class="lang-pl">Tak. Do wydarzeń z listy „Idę tam!" dodasz bilet w PDF lub jako zdjęcie i otworzysz go offline — Twoje bilety masz w jednym miejscu, obok planu.</span><span class="lang-en">Yes. You can attach a PDF or photo ticket to events on your "I'm going!" list and open it offline — your tickets in one place, next to your plan.</span></p>
+      </details>
+      <details>
+        <summary><span class="lang-pl">Na jakich urządzeniach działa FestiFind?</span><span class="lang-en">Which devices does FestiFind support?</span></summary>
+        <p><span class="lang-pl">FestiFind jest dostępny na iOS w App Store. Wersja na Androida jest w przygotowaniu.</span><span class="lang-en">FestiFind is available on iOS in the App Store. An Android version is in the works.</span></p>
+      </details>
     </div>
   </div>
 </section>
