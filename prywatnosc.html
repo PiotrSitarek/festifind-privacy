@@ -3,9 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0D0D1A">
 <title>FestiFind — Polityka prywatności</title>
 <meta name="description" content="Polityka prywatności FestiFind. Nie zbieramy danych osobowych — wszystko zostaje na Twoim telefonie.">
-<link rel="icon" href="icon.png">
+<link rel="canonical" href="https://piotrsitarek.github.io/festifind-privacy/prywatnosc.html">
+<meta name="robots" content="noindex, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FestiFind">
+<meta property="og:title" content="FestiFind — Polityka prywatności">
+<meta property="og:description" content="Nie zbieramy danych osobowych — wszystko zostaje na Twoim telefonie.">
+<meta property="og:url" content="https://piotrsitarek.github.io/festifind-privacy/prywatnosc.html">
+<meta property="og:image" content="https://piotrsitarek.github.io/festifind-privacy/ogimage.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FestiFind — Polityka prywatności">
+<meta name="twitter:description" content="Nie zbieramy danych osobowych — wszystko zostaje na Twoim telefonie.">
+<meta name="twitter:image" content="https://piotrsitarek.github.io/festifind-privacy/ogimage.png">
+
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -18,7 +40,7 @@
     <a class="brand" href="index.html"><img src="icon.png" alt="FestiFind"><span class="brand-name">FestiFind</span></a>
     <div class="nav-links">
       <a href="index.html"><span class="lang-pl">Aplikacja</span><span class="lang-en">App</span></a>
-      <a class="active" href="prywatnosc.html"><span class="lang-pl">Prywatność</span><span class="lang-en">Privacy</span></a>
+      <a class="active" href="prywatnosc.html" aria-current="page"><span class="lang-pl">Prywatność</span><span class="lang-en">Privacy</span></a>
       <span class="lang-toggle lang-na" role="group" aria-label="Język / Language">
         <button id="btn-pl" class="on" onclick="setLang('pl')">PL</button>
         <button id="btn-en" onclick="setLang('en')">EN</button>
@@ -33,7 +55,7 @@
     <!-- ====== PL ====== -->
     <div class="lang-pl">
       <h1>Polityka prywatności</h1>
-      <p class="updated">Ostatnia aktualizacja: 29 kwietnia 2026</p>
+      <p class="updated">Ostatnia aktualizacja: 15 czerwca 2026</p>
       <div class="tldr"><strong>W skrócie.</strong> FestiFind nie zbiera żadnych danych osobowych. Wszystkie Twoje dane (ulubione, plany, przypomnienia) przechowywane są wyłącznie lokalnie na Twoim urządzeniu i nigdy nie opuszczają telefonu.</div>
 
       <h2>1. Kim jesteśmy</h2>
@@ -48,8 +70,10 @@
         <li>Lista wydarzeń oznaczonych „Idę tam!"</li>
         <li>Zaplanowane przypomnienia o wydarzeniach</li>
         <li>Obserwowane frazy wyszukiwania</li>
+        <li>Bilety (PDF lub zdjęcia) dodane do wydarzeń — przechowywane wyłącznie w pamięci urządzenia</li>
         <li>Ustawienia aplikacji (motyw, język)</li>
       </ul>
+      <p>Dostęp do galerii zdjęć jest wymagany wyłącznie gdy samodzielnie dodajesz bilet jako zdjęcie. Aplikacja nie skanuje galerii ani nie wysyła jej zawartości na żaden serwer.</p>
 
       <h2>3. Dane wydarzeń</h2>
       <p>Aplikacja pobiera listę wydarzeń muzycznych z publicznego serwera (GitHub Releases). Pobieranie odbywa się przy uruchomieniu aplikacji. Żądanie HTTP nie zawiera danych identyfikujących użytkownika.</p>
@@ -58,7 +82,8 @@
       <p>FestiFind może wysyłać powiadomienia lokalne jako przypomnienia o nadchodzących wydarzeniach. Powiadomienia są generowane lokalnie — nie korzystamy z zewnętrznych serwerów push (FCM, APNs). Możesz wyłączyć powiadomienia w ustawieniach systemowych urządzenia.</p>
 
       <h2>5. Usługi zewnętrzne</h2>
-      <p>Aplikacja nie korzysta z usług analitycznych, reklamowych ani śledzących (brak Firebase Analytics, Google Analytics, Facebook SDK itp.).</p>
+      <p>Aplikacja korzysta z <strong>Firebase Analytics</strong> (Google LLC) wyłącznie do rejestrowania jednego zdarzenia: kliknięcia linku do zakupu biletów. Zdarzenie zawiera identyfikator i nazwę wydarzenia oraz źródło danych — nie zawiera danych osobowych ani danych identyfikujących użytkownika. Firebase Analytics może gromadzić anonimowe dane diagnostyczne zgodnie z własną polityką prywatności Google: <a class="inline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Reklamy ani identyfikator reklamowy nie są używane (Advertising ID jest jawnie wyłączony).</p>
+      <p>Aplikacja nie korzysta z innych usług analitycznych, reklamowych ani śledzących (brak Google Analytics, Facebook SDK, Crashlytics itp.).</p>
       <p>Dane o wydarzeniach pobierane są z publicznego serwera GitHub. Więcej informacji: <a class="inline" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
 
       <h2>6. Dzieci</h2>
@@ -74,7 +99,7 @@
     <!-- ====== EN ====== -->
     <div class="lang-en">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 29 April 2026</p>
+      <p class="updated">Last updated: 15 June 2026</p>
       <div class="tldr"><strong>In short.</strong> FestiFind collects no personal data. All of your data (favourites, plans, reminders) is stored only locally on your device and never leaves your phone.</div>
 
       <h2>1. Who we are</h2>
@@ -89,8 +114,10 @@
         <li>Events marked as “I'm going!”</li>
         <li>Scheduled event reminders</li>
         <li>Watched search keywords</li>
+        <li>Tickets (PDFs or photos) attached to events — stored only in your device’s local storage</li>
         <li>App settings (theme, language)</li>
       </ul>
+      <p>Access to your photo library is requested only when you choose to attach a ticket as a photo. The app does not scan your gallery or send its contents anywhere.</p>
 
       <h2>3. Event data</h2>
       <p>The app downloads a list of music events from a public server (GitHub Releases). The download happens when the app starts. The HTTP request contains no user-identifying data.</p>
@@ -99,7 +126,8 @@
       <p>FestiFind may send local notifications as reminders about upcoming events. Notifications are generated locally — we use no external push servers (FCM, APNs). You can turn notifications off in your device's system settings.</p>
 
       <h2>5. Third-party services</h2>
-      <p>The app uses no analytics, advertising or tracking services (no Firebase Analytics, Google Analytics, Facebook SDK, etc.).</p>
+      <p>The app uses <strong>Firebase Analytics</strong> (Google LLC) solely to record one event: a tap on a ticket purchase link. The event contains the event identifier, name and data source — no personal data or user-identifying information is included. Firebase Analytics may collect anonymous diagnostic data under Google's own privacy policy: <a class="inline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Advertising and the Advertising ID are not used (explicitly disabled).</p>
+      <p>The app uses no other analytics, advertising or tracking services (no Google Analytics, Facebook SDK, Crashlytics, etc.).</p>
       <p>Event data is downloaded from a public GitHub server. More information: <a class="inline" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
 
       <h2>6. Children</h2>
